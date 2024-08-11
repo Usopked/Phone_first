@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Hello, World!qq
@@ -24,7 +24,7 @@ function App() {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
