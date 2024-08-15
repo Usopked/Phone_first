@@ -7,21 +7,29 @@
   pointer-events: none;
 }
 
+.App-banner {
+  max-width: 100%; /* 최대 너비를 화면 너비에 맞춤 */
+  height: auto;    /* 높이는 너비에 비례하여 자동 조정 */
+  max-height: 200px; /* 이미지의 최대 높이를 설정하여 화면이 너무 커지지 않도록 함 */
+  object-fit: contain; /* 이미지 비율 유지하면서 화면에 맞춤 */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/* App.css */
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-sizing: border-box; /* 패딩과 보더를 높이와 너비에 포함시킴 */
 }
 
 .App-link {
