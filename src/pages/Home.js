@@ -3,8 +3,11 @@
 import React from 'react';
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
+import { useGlobalState } from '../context/GlobalState';
 
 const Home = () => {
+  const { weight } = useGlobalState();
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', backgroundColor: '#f7fafc', textAlign: 'center' }}>
       <img src={logo} className="App-logo" alt="logo" />
@@ -14,15 +17,17 @@ const Home = () => {
       <p style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#4a5568', marginBottom: '2rem' }}>
         This is the main landing page of the application.
       </p>
+      <p style={{ fontSize: '1.125rem', color: '#4a5568', marginBottom: '2rem' }}>
+        Current Weight: {weight}
+      </p>
       <Link to="/about" style={{ color: '#3182ce', textDecoration: 'none', padding: '0.5rem 1rem', border: '1px solid #3182ce', borderRadius: '0.375rem', fontWeight: 'bold', backgroundColor: 'white' }}>
         About me
       </Link>
       <Link to="/ques1" style={{ color: '#3182ce', textDecoration: 'none', padding: '0.5rem 1rem', border: '1px solid #3182ce', borderRadius: '0.375rem', fontWeight: 'bold', backgroundColor: 'white' }}>
-        question
+        Question
       </Link>
     </div>
   );
 };
 
 export default Home;
-
