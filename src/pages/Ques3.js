@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from '../logo.svg';
+import luffy from '../luffy.svg';
 import { useNavigate } from 'react-router-dom';
 import { useGlobalDispatch } from '../context/GlobalState';
+import './Ques.css';  // 스타일 파일 임포트
 
 const Ques3 = () => {
   const dispatch = useGlobalDispatch();
@@ -13,24 +14,14 @@ const Ques3 = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', backgroundColor: '#f7fafc', textAlign: 'center' }}>
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 style={{ fontSize: '2.25rem', fontWeight: 'bold', marginBottom: '1rem', color: '#2b6cb0' }}>
-        Question 3
-      </h1>
-      <div style={{ display: 'flex', gap: '1rem' }}>
-        <button onClick={() => handleOptionClick(1)} style={{ padding: '1rem', backgroundColor: '#3182ce', color: 'white', border: 'none', borderRadius: '0.375rem' }}>
-          Option 1
-        </button>
-        <button onClick={() => handleOptionClick(2)} style={{ padding: '1rem', backgroundColor: '#3182ce', color: 'white', border: 'none', borderRadius: '0.375rem' }}>
-          Option 2
-        </button>
-        <button onClick={() => handleOptionClick(3)} style={{ padding: '1rem', backgroundColor: '#3182ce', color: 'white', border: 'none', borderRadius: '0.375rem' }}>
-          Option 3
-        </button>
-        <button onClick={() => handleOptionClick(4)} style={{ padding: '1rem', backgroundColor: '#3182ce', color: 'white', border: 'none', borderRadius: '0.375rem' }}>
-          Option 4
-        </button>
+    <div className="ques-container">
+      <img src={luffy} className="App-luffy" alt="luffy" />
+      <h1 className="ques-title">Question 3</h1>
+      <div className="button-container">
+        <button onClick={() => handleOptionClick(1)} className="custom-button">Option 1</button>
+        <button onClick={() => handleOptionClick(2)} className="custom-button">Option 2</button>
+        <button onClick={() => handleOptionClick(3)} className="custom-button">Option 3</button>
+        <button onClick={() => handleOptionClick(4)} className="custom-button">Option 4</button>
       </div>
     </div>
   );

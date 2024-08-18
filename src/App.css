@@ -6,7 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.App-luffy {
+  height: 100vmin;
+  pointer-events: none;
+}
 .App-banner {
   max-width: 100%; /* 최대 너비를 화면 너비에 맞춤 */
   height: auto;    /* 높이는 너비에 비례하여 자동 조정 */
