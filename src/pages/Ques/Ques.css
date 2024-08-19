@@ -15,6 +15,13 @@
   color: #2b6cb0;
 }
 
+.ques-content {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #2b6cb0;
+}
+
 .button-container {
   display: flex;
   flex-direction: column;
