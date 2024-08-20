@@ -1,14 +1,38 @@
 import React from 'react';
-import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
 import { useGlobalState } from '../context/GlobalState';
+
+// 이미지 파일 import
+import normalImage from '../Images/mona1.jpg';
+import mildImage from '../Images/mona2.jpg';
+import moderateImage from '../Images/mona3.jpg';
+import slightlySevereImage from '../Images/mona4.jpg';
+import severeImage from '../Images/mona5.jpg';
+import logo from '../Images/logo.svg';
 
 const About = () => {
   const { weight } = useGlobalState();
 
+  // weight 값에 따라 이미지 선택
+  const getImage = () => {
+    if (weight >= 0 && weight <= 4) {
+      return normalImage;
+    } else if (weight >= 5 && weight <= 9) {
+      return mildImage;
+    } else if (weight >= 10 && weight <= 14) {
+      return moderateImage;
+    } else if (weight >= 15 && weight <= 19) {
+      return slightlySevereImage;
+    } else if (weight >= 20 && weight <= 27) {
+      return severeImage;
+    } else {
+      return logo; // 기본 로고 이미지 또는 오류 처리 이미지
+    }
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', backgroundColor: '#f7fafc', textAlign: 'center' }}>
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={getImage()} className="App-mona" alt="logo" />
       <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: '#2b6cb0' }}>
         정서검사결과
       </h1>

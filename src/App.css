@@ -6,9 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
-.App-luffy {
-  height: 100vmin;
-  pointer-events: none;
+.App-mona {
+  width: 90vw; /* 화면 너비의 90%로 설정 */
+  max-width: 90%; /* 부모 컨테이너의 너비의 90%로 제한 */
+  height: auto;  /* 높이는 비율에 맞춰 자동 조정 */
+  pointer-events: none; /* 사용자 입력 비활성화 */
 }
 .App-banner {
   max-width: 100%; /* 최대 너비를 화면 너비에 맞춤 */

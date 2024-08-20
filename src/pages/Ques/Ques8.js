@@ -1,5 +1,5 @@
 import React from 'react';
-import luffy from '../../luffy.svg';
+import mona from '../../Images/Mona.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { useGlobalDispatch } from '../../context/GlobalState';
 import './Ques.css';
@@ -15,7 +15,7 @@ const Ques8 = () => {
 
   return (
     <div className="ques-container">
-      <img src={luffy} className="App-luffy" alt="luffy" />
+      <img src={mona} className="App-mona" alt="mona" />
       <h1 className="ques-content">다른 사람들이 주목할 정도로 너무 느리게 움직이거나 말을 함
 또는 반대로 평상시보다 많이 움직여서, 너무 안절부절 못하거나 들떠 있음</h1>
       <div className="button-container">

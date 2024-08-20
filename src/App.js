@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from './banner.svg';
+// import banner from './images/banner.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.js'; 
@@ -13,7 +13,7 @@ import Ques6 from './pages/Ques/Ques6.js';
 import Ques7 from './pages/Ques/Ques7.js';
 import Ques8 from './pages/Ques/Ques8.js';
 import Ques9 from './pages/Ques/Ques9.js';
-import { GlobalStateProvider } from './context/GlobalState';
+import { GlobalStateProvider } from './context/GlobalState.js';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       <Router>
         <div className="App">
           <header className="App-header">
-            <img src={banner} className="App-banner" alt="banner" />
+            {/*<img src={banner} className="App-banner" alt="banner" /> */}
           </header>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -42,6 +42,7 @@ function App() {
         </div>
       </Router>
     </GlobalStateProvider>
+
   );
 }
 

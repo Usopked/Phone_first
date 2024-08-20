@@ -1,3 +1,5 @@
+// src/context/GlobalState.js
+
 import React, { createContext, useReducer, useContext } from 'react';
 
 const GlobalStateContext = createContext();
@@ -13,6 +15,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         weight: state.weight + action.payload,
+      };
+    case 'RESET_WEIGHT':
+      return {
+        ...state,
+        weight: 0,
       };
     default:
       return state;

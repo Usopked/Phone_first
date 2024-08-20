@@ -1,5 +1,5 @@
 import React from 'react';
-import luffy from '../../luffy.svg';
+import mona from '../../Images/Mona.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { useGlobalDispatch } from '../../context/GlobalState';
 import './Ques.css';
@@ -15,7 +15,7 @@ const Ques4 = () => {
 
   return (
     <div className="ques-container">
-      <img src={luffy} className="App-luffy" alt="luffy" />
+      <img src={mona} className="App-mona" alt="mona" />
       <h1 className="ques-content">피곤하다고 느끼거나 기운이 거의 없음	
 </h1>
       <div className="button-container">

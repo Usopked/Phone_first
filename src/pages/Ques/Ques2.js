@@ -1,5 +1,5 @@
 import React from 'react';
-import luffy from '../../luffy.svg';
+import mona from '../../Images/Mona.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { useGlobalDispatch } from '../../context/GlobalState';
 import './Ques.css';
@@ -15,7 +15,7 @@ const Ques2 = () => {
 
   return (
     <div className="ques-container">
-      <img src={luffy} className="App-luffy" alt="luffy" />
+      <img src={mona} className="App-mona" alt="mona" />
       <h1 className="ques-content">기분이 가라앉거나.우울하거나.희망이 없음</h1>
       <div className="button-container">
         <button onClick={() => handleOptionClick(0)} className="custom-button">전혀 방해받지 않았다.</button>
