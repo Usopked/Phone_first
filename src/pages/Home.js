@@ -21,7 +21,7 @@ const Home = () => {
         우울증 자가진단 평가
       </h1>
       <p style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#4a5568', marginBottom: '2rem' }}>
-        지난 2주일 동안 당신은 다음의 문제들로 인해서 얼마나 자주 방해를 받았습니까?
+        지난 2주일 동안 다음 문제들로 인해 얼마나 자주 방해를 받았나요?
       </p>
       <button 
         onClick={handleStartExam} 
